@@ -1,0 +1,12 @@
+specVersion: "v1beta"
+serviceId: "dashboardhidden"
+location: "us-central1"
+schema:
+  source: "./schema"
+  datasource:
+    postgresql:
+      database: "fdcdb"
+      cloudSql:
+        instanceId: "dashboardhidden-fdc"
+      # schemaValidation: "COMPATIBLE"
+connectorDirs: ["./connector"]

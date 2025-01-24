@@ -1,6 +1,11 @@
+import 'package:etra/app_Routes.dart';
 import 'package:etra/core/config/dio_config.dart';
 import 'package:etra/core/constants/app_colors.dart';
+import 'package:etra/views/gridview_hommepage.dart';
 import 'package:etra/views/homepage.dart';
+import 'package:etra/views/rechargePage.dart';
+import 'package:etra/views/registerPage.dart';
+import 'package:etra/views/userReg.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:etra/providers/userProvider.dart';
@@ -24,6 +29,8 @@ class MyApp extends StatelessWidget {
         ),
       ],
       child: MaterialApp(
+          initialRoute: AppRoutes.home, // Starting route
+  routes: AppRoutes.routes, 
         theme: ThemeData(
           primaryColor: AppColors.primaryColor,
           scaffoldBackgroundColor: AppColors.backgroundColor,
@@ -32,7 +39,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
         debugShowCheckedModeBanner: false,
-        home: Homepage(), // The screen that will display users
+        home:RechargePage(), // The screen that will display users
       ),
     );
   }
